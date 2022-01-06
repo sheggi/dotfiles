@@ -160,7 +160,7 @@ echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
 
-echo 'Install zsh-autosuggestions'
+echo 'Install prettyping'
 echo '---------------------------'
 brew install prettyping
 
@@ -172,7 +172,7 @@ echo 'Install ffmpeg'
 echo '---------------------------'
 brew install ffmpeg
 
-echo 'Install ffmpeg'
+echo 'Install gpg'
 echo '---------------------------'
 brew install gpg
 
