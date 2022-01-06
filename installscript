@@ -180,6 +180,10 @@ echo 'Install gpg'
 echo '---------------------------'
 brew install gpg
 
+echo 'Install jq'
+echo '---------------------------'
+brew install jq
+
 echo 'Install php environment'
 echo '---------------------------'
 sh $HOME/.dotfiles/install/php-env.sh
