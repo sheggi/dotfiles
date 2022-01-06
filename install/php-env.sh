@@ -29,33 +29,36 @@ echo 'Install composer'
 echo '----------------'
 brew install composer
 
+echo 'Install cgr for conflict free composer global require'
+echo '---------------------'
+composer global require consolidation/cgr
+
 echo 'Install laravel envoy'
 echo '---------------------'
-composer global require laravel/envoy
-
+cgr laravel/envoy
 
 echo 'Install laravel installer'
 echo '---------------------'
-composer global require laravel/installer
+cgr laravel/installer
 
 echo 'Install phpunit-watcher'
 echo '-----------------------'
-composer global require spatie/phpunit-watcher
+cgr spatie/phpunit-watcher
 
 echo 'Install friendsofphp/php-cs-fixer'
 echo '---------------------------------'
-composer global require friendsofphp/php-cs-fixer
+cgr friendsofphp/php-cs-fixer
 
 echo 'Install beyondcode/expose'
 echo '---------------------------------'
-composer global require beyondcode/expose
+cgr beyondcode/expose
 
 echo 'Install spatie/x-ray'
 echo '---------------------------------'
-composer global require spatie/x-ray
+cgr spatie/x-ray
 
 echo 'Install laravel valet'
 echo '---------------------'
-composer global require laravel/valet
+cgr laravel/valet
 valet trust
 valet install
