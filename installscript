@@ -164,6 +164,10 @@ echo 'Install prettyping'
 echo '---------------------------'
 brew install prettyping
 
+echo 'Install pygmentize'
+echo '---------------------------'
+brew install pygmentize
+
 echo 'Install ettercap'
 echo '---------------------------'
 brew install ettercap

@@ -329,9 +329,9 @@ kraken () {
 }
 
 colorize_via_pygmentize() {
-    if ! (( $+commands[pygmentize] )); then
-        echo "package 'Pygments' is not installed!"
-        return 1
+    if [ ! -x $(which pygmentize) ]; then
+        echo package \'pygmentize\' is not installed!
+        exit -1
     fi
 
     # If the environment varianle ZSH_COLORIZE_STYLE
