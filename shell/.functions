@@ -455,12 +455,12 @@ function reloadQuickLook() {
     done
 }
 
-function st() {
+function pstorm() {
     dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
     phpstorm $dir
 }
 
-function vs() {
+function vscode() {
     dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
     code $dir
 }

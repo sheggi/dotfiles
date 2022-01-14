@@ -81,6 +81,8 @@ alias watch='watch '
 alias ku='kubectl'
 alias kubeconfig='code ~/.kube/config'
 alias k='kraken'
+alias s='pstorm'
+alias v='vscode'
 
 # Git
 # ---------------
