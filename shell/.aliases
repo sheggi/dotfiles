@@ -22,9 +22,8 @@ alias sshconfig="code ~/.ssh/config"
 alias phpunit="vendor/bin/phpunit"
 alias phpunitw="phpunit-watcher watch"
 alias pw="phpunit-watcher watch"
-alias p="phpunit $@"
+alias t="phpunit $@"
 alias pf="phpunit --filter $@"
-alias p="phpunit $@"
 alias pest="./vendor/bin/pest"
 alias pe="pest $@"
 alias pef="pest --filter $@"
@@ -81,7 +80,7 @@ alias watch='watch '
 alias ku='kubectl'
 alias kubeconfig='code ~/.kube/config'
 alias k='kraken'
-alias s='pstorm'
+alias p='pstorm'
 alias v='vscode'
 
 # Git
