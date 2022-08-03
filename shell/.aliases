@@ -92,6 +92,8 @@ alias kubeconfig='code ~/.kube/config'
 alias k='kraken'
 alias p='pstorm'
 alias v='vscode'
+alias pk="pstorm && kraken"
+alias vk="vscode && kraken"
 
 # Git
 # ---------------
