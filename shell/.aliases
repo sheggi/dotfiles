@@ -94,6 +94,8 @@ alias p='pstorm'
 alias v='vscode'
 alias pk="pstorm && kraken"
 alias vk="vscode && kraken"
+alias dev="npm run dev"
+alias prod="npm run prod"
 
 # Git
 # ---------------
