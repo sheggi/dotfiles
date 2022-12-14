@@ -158,7 +158,7 @@ function phpv() {
     done
 
     echo "unlinking all php version"
-    brew unlink php@7.4 php@8.0 php
+    brew unlink php@7.2 php@7.3 php@7.4 php@8.0 php
 
     echo "link $1"
     brew link --force --overwrite $1
@@ -173,6 +173,7 @@ function phpv() {
     valet install
 }
 
+alias php72="phpv php@7.2"
 alias php73="phpv php@7.3"
 alias php74="phpv php@7.4"
 alias php8="phpv php@8.0"
@@ -346,6 +347,40 @@ kraken () {
     /Applications/GitKraken.app/Contents/MacOS/GitKraken -p "$(git rev-parse --show-toplevel)" &>/dev/null &
 }
 
+colorize_via_pygmentize() {
+    if [ ! -x $(which pygmentize) ]; then
+        echo package \'pygmentize\' is not installed!
+        exit -1
+    fi
+
+    # If the environment varianle ZSH_COLORIZE_STYLE
+    # is set, use that theme instead. Otherwise,
+    # use the default.
+    if [ -z $ZSH_COLORIZE_STYLE ]; then
+        ZSH_COLORIZE_STYLE="default"
+    fi
+
+    # pygmentize stdin if no arguments passed
+    if [ $# -eq 0 ]; then
+        pygmentize -O style="$ZSH_COLORIZE_STYLE" -g
+        return $?
+    fi
+
+    # guess lexer from file extension, or
+    # guess it from file contents if unsuccessful
+
+    local FNAME lexer
+    for FNAME in "$@"
+    do
+        lexer=$(pygmentize -N "$FNAME")
+        if [[ $lexer != text ]]; then
+            pygmentize -O style="$ZSH_COLORIZE_STYLE" -l "$lexer" "$FNAME"
+        else
+            pygmentize -O style="$ZSH_COLORIZE_STYLE" -g "$FNAME"
+        fi
+    done
+}
+
 # like chrome always in light theme...
 function chromeLight() {
     defaults write com.google.Chrome NSRequiresAquaSystemAppearance -bool yes
@@ -387,19 +422,22 @@ function updateAppStore() {
 
 # Guess email for git user
 function email-guess() {
+    private_email=thesheggi@gmail.com
+    novu_email=vonallmen@novu.ch
+
     GREEN="\033[32m"
     NOCOLOR="\033[0m"
 
     remote=`git remote -v | awk '/\(push\)$/ {print $2}'`
     echo -e "${GREEN}Guessing email based on git repo $remote${NOCOLOR}"
-    email=okaufmann91@gmail.com # default
+    email=$private_email # default
 
-    if [[ $remote == *github.com:teamnovu* ]]; then
-        email=oliver.kaufmann@novu.ch
+    if [[ $remote == *github.com[:/]teamnovu* || $remote == *github.com:/teamnovu* ]]; then
+        email=$novu_email
     fi
 
     if [[ $remote == *projects.lernetz.ch* ]]; then
-        email=oliver.kaufmann@novu.ch
+        email=$novu_email
     fi
 
     if [[ $remote == *gitlab.com:JKwebGmbH* ]]; then
@@ -453,4 +491,14 @@ function e() {
     else
         code .
     fi
+}
+
+function pstorm() {
+    dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
+    phpstorm $dir
+}
+
+function vscode() {
+    dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
+    code $dir
 }
