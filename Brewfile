@@ -3,6 +3,8 @@ tap "homebrew/cask-fonts"
 tap 'homebrew/cask-versions'
 tap "homebrew/bundle"
 tap 'nicoverbruggen/homebrew-cask'
+# for legacy php versions
+tap 'shivammathur/php'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -42,8 +44,10 @@ brew 'gifsicle'
 
 # PHP Dependencies
 brew 'php'
+brew 'php@8.1'
 brew 'php@8.0'
 brew 'php@7.4'
+brew 'php@7.2'
 brew 'composer'
 brew 'libyaml'
 brew 'imagemagick'
@@ -75,9 +79,9 @@ cask 'discord'
 cask 'docker'
 cask 'insomnia'
 cask 'ray'
-cask 'slack'
-cask 'visual-studio-code'
-cask 'zoom'
+# cask 'slack'
+# cask 'visual-studio-code'
+# cask 'zoom'
 cask 'helo'
 cask 'telegram-desktop'
 cask 'tinkerwell'
@@ -100,4 +104,4 @@ cask "qlimagesize"
 # mas 'Spark', id: 1176895641
 # mas 'Speedtest', id: 1153157709
 # mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
+# mas 'Tweetbot', id: 1384080005
