@@ -2,7 +2,7 @@
 
 # Load Homebrew
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
-eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Path to dotfiles
 export DOTFILESDIR="$HOME/.dotfiles"
@@ -63,7 +63,7 @@ export PATH="$PATH:$HOME/Code/tools/flutter/bin"
 export PATH="$PATH:$HOME/Library/Python/3.10/bin"
 
 # dotnet cli tools
-export PATH="$PATH:/Users/okaufmann/.dotnet/tools"
+export PATH="$PATH:/Users/sheggi/.dotnet/tools"
 
 # dont update all other packages when installing a new brew package
 # https://github.com/Homebrew/brew/blob/7d31a70373edae4d8e78d91a4cbc05324bebc3ba/Library/Homebrew/manpages/brew.1.md.erb#L202
