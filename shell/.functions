@@ -148,8 +148,11 @@ function watchfolder() {
 
 # Switch PHP versions
 function phpv() {
-    echo "stopping valet"
-    valet stop
+
+    if [[ " $* " == *" --global "* ]]; then
+        echo "stopping valet"
+        valet stop
+    fi
 
     echo "stopping all php services"
     brew services list | awk '{print $1}' | grep php | while read line
@@ -158,26 +161,31 @@ function phpv() {
     done
 
     echo "unlinking all php version"
-    brew unlink php@7.2 php@7.3 php@7.4 php@8.0 php
+    brew unlink php@7.2 php@7.4 php@8.0 php@8.1 php
 
     echo "link $1"
     brew link --force --overwrite $1
 
-    echo "start $1"
-    brew services start $1
+    echo "starting all php services"
+    brew services list | awk '{print $1}' | grep php | while read line
+    do
+        brew services start "$line"
+    done
 
-    echo "install composer packages"
-    composer global update
+    if [[ " $* " == *" --global "* ]]; then
+        echo "install composer packages"
+        composer global update
 
-    echo "installing valet"
-    valet install
+        echo "installing valet"
+        valet install
+    fi
 }
 
 alias php72="phpv php@7.2"
-alias php73="phpv php@7.3"
 alias php74="phpv php@7.4"
 alias php80="phpv php@8.0"
 alias php81="phpv php@8.1"
+alias php82="phpv php"
 
 # Network scanner
 function bitCountForMask {
