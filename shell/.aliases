@@ -77,7 +77,7 @@ alias publickey="cat ~/.ssh/id_rsa.pub"
 # Tool replacements & helpers
 # ---------------
 alias man=tldr
-alias ccat="bat -A $@"
+alias bcat="bat -A $@"
 alias pcat='colorize_via_pygmentize'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
