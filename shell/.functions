@@ -510,3 +510,10 @@ function vscode() {
     dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
     code $dir
 }
+
+function browse() {
+    project=$(basename ${1:-$(pwd)})
+    url="http://"$project".sheggi.io"
+    echo "opening project ${project} at ${url}"
+    open "${url}"
+}
