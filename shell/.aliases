@@ -100,6 +100,7 @@ alias vk="vscode && kraken"
 alias dev="npm run dev"
 alias prod="npm run prod"
 alias watch="npm run watch"
+alias b="browse"
 
 # Git
 # ---------------
