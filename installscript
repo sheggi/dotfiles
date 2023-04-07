@@ -89,7 +89,7 @@ export NVM_DIR="$HOME/.nvm"
 # nvm install 12
 nvm install 14
 nvm install 16
-nvm install --lts
+nvm install 18
 nvm use 18
 
 echo 'Install php environment'

@@ -46,6 +46,11 @@ alias composer8.0='php8.0 $(brew --prefix composer)/bin/composer'
 alias composer8.1='php8.1 $(brew --prefix composer)/bin/composer'
 alias composer8.2='php8.2 $(brew --prefix composer)/bin/composer'
 
+alias a81="php8.1 artisan $@"
+alias a80="php8.0 artisan $@"
+alias a74="php7.4 artisan $@"
+
+
 # Laravel
 # ---------------
 alias fresh='php artisan migrate:fresh --seed'
@@ -101,6 +106,7 @@ alias dev="npm run dev"
 alias prod="npm run prod"
 alias watch="npm run watch"
 alias b="browse"
+alias kr='kraken'
 
 # Git
 # ---------------
