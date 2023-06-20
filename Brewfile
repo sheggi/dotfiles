@@ -3,8 +3,6 @@ tap "homebrew/cask-fonts"
 tap 'homebrew/cask-versions'
 tap "homebrew/bundle"
 tap 'nicoverbruggen/homebrew-cask'
-# for legacy php versions
-tap 'shivammathur/php'
 
 # Binaries
 brew 'bash' # Latest Bash version
@@ -36,32 +34,8 @@ brew 'mas' # Mac App Store manager
 brew 'libpq' # PostgresQL client
 brew 'jq' # JSON parser
 
-# Spatie Medialibrary
-brew 'jpegoptim'
-brew 'optipng'
-brew 'pngquant'
-brew 'svgo'
-brew 'gifsicle'
-
-# PHP Dependencies
-brew 'php'
-brew 'php@8.1'
-brew 'php@8.0'
-brew 'php@7.4'
-brew 'php@7.2'
-brew 'composer'
-brew 'libyaml'
-brew 'imagemagick'
-
 # Development
-brew "dnsmasq"
-
-# brew 'meilisearch'
-brew 'mysql', restart_service: true
-brew 'nginx'
-# brew 'node'
-brew 'redis', restart_service: true
-brew 'yarn'
+# brew "dnsmasq"
 
 # Fonts
 cask "font-fira-code"
@@ -75,17 +49,14 @@ cask 'font-source-serif-pro'
 
  # Apps
 cask "keepingyouawake"
-cask "phpmon"
 cask 'discord'
 cask 'docker'
 cask 'insomnia'
-cask 'ray'
 # cask 'slack'
 # cask 'visual-studio-code'
 # cask 'zoom'
 cask 'helo'
 cask 'telegram-desktop'
-cask 'tinkerwell'
 
 # Quicklook
 cask "syntax-highlight"

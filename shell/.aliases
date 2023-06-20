@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Redis
-# ---------------
-alias flush-redis="redis-cli FLUSHALL"
-
 # Oh my zsh config helpers
 # ---------------
 alias cddotfiles="cd ~/.dotfiles"
@@ -16,56 +12,6 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 alias dotfiles="code ~/.dotfiles"
 alias hostfile="sudo code /etc/hosts"
 alias sshconfig="code ~/.ssh/config"
-
-# PHP
-# ---------------
-alias phpunit="vendor/bin/phpunit"
-alias phpunitw="phpunit-watcher watch"
-alias pw="phpunit-watcher watch"
-alias t="phpunit $@"
-alias pf="phpunit --filter $@"
-alias pest="./vendor/bin/pest"
-alias pe="pest $@"
-alias pef="pest --filter $@"
-alias pew="pest --watch $@"
-alias c="composer"
-alias cu="composer update"
-alias cr="composer require"
-alias crs="composer require --no-scripts"
-alias ci="composer install"
-alias cda="composer dump-autoload -o"
-alias yii="php yii $@"
-
-alias php7.4='$(brew --prefix php@7.4)/bin/php'
-alias php8.0='$(brew --prefix php@8.0)/bin/php'
-alias php8.1='$(brew --prefix php@8.1)/bin/php'
-alias php8.2='$(brew --prefix php@8.2)/bin/php'
-
-alias composer7.4='php7.4 $(brew --prefix composer)/bin/composer'
-alias composer8.0='php8.0 $(brew --prefix composer)/bin/composer'
-alias composer8.1='php8.1 $(brew --prefix composer)/bin/composer'
-alias composer8.2='php8.2 $(brew --prefix composer)/bin/composer'
-
-alias a81="php8.1 artisan $@"
-alias a80="php8.0 artisan $@"
-alias a74="php7.4 artisan $@"
-
-
-# Laravel
-# ---------------
-alias fresh='php artisan migrate:fresh --seed'
-alias a="artisan" # artisan is provided by zsh plugin
-alias v="vapor"
-alias deploy='envoy run deploy'
-alias deploy-code='envoy run deploy-code'
-alias ngrok="$HOME/.composer/global/laravel/valet/vendor/laravel/valet/bin/ngrok"
-alias please="php please $@"
-alias mm="php artisan make:migration"
-alias migrate="php artisan migrate"
-alias rollback="php artisan migrate:rollback --step=1"
-alias lpw="php artisan tinker --execute=\"echo Hash::make('$1')\" | pbcopy"
-alias vendorinit="rm -Rf vendor && composer install"
-
 
 # SSH
 # ---------------
