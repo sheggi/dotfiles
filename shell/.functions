@@ -423,8 +423,8 @@ function ocrPdf() {
 }
 
 function e() {
-    if test -f "composer.json"; then
-        phpstorm .
+    if test -d ".idea"; then
+        intellij .
     else
         code .
     fi
@@ -438,6 +438,11 @@ function e() {
 function vscode() {
     dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
     code $dir
+}
+
+function intellij() {
+    dir="$(cd "$(dirname "$1")" > /dev/null; pwd -P)/$(basename "$1")"
+    idea $dir
 }
 
 function browse() {
