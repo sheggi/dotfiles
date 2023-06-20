@@ -96,7 +96,7 @@ alias sudo='sudo '
 # Image to Text converter
 alias ocr='screencapture -i ~/tmp/screenshot.png && tesseract ~/tmp/screenshot.png stdout | pbcopy && rm -f ~/tmp/screenshot.png'
 
-# Scape webpage
+# Scrape webpage
 alias scrape="scrapeUrl"
 
 # Restart touch bar

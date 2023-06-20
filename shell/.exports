@@ -24,7 +24,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Google SDK
-export PATH="/Users/${USER}/google-cloud-sdk/bin:$PATH"
+# export PATH="/Users/${USER}/google-cloud-sdk/bin:$PATH"
 
 # Tools
 export PATH="/Users/${USER}/Code/tools:$PATH"
@@ -37,20 +37,17 @@ export LC_MESSAGES="en_US.UTF-8"
 # fix Setting locale failed error
 export LC_CTYPE=en_US.utf-8
 
-# node
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-
-# Flutter
-export PATH="$PATH:$HOME/Code/tools/flutter/bin"
+# # Flutter
+# export PATH="$PATH:$HOME/Code/tools/flutter/bin"
 
 # Python
 export PATH="$PATH:$HOME/Library/Python/3.10/bin"
 
-# dotnet cli tools
-export PATH="$PATH:/Users/sheggi/.dotnet/tools"
+# # dotnet cli tools
+# export PATH="$PATH:/Users/sheggi/.dotnet/tools"
 
-# krew
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# # krew
+# export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # dont update all other packages when installing a new brew package
 # https://github.com/Homebrew/brew/blob/7d31a70373edae4d8e78d91a4cbc05324bebc3ba/Library/Homebrew/manpages/brew.1.md.erb#L202

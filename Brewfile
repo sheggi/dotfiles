@@ -48,15 +48,15 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
  # Apps
-cask "keepingyouawake"
-cask 'discord'
+# cask "keepingyouawake"
+# cask 'discord'
 cask 'docker'
-cask 'insomnia'
+# cask 'insomnia'
 # cask 'slack'
 # cask 'visual-studio-code'
 # cask 'zoom'
-cask 'helo'
-cask 'telegram-desktop'
+# cask 'helo'
+# cask 'telegram-desktop'
 
 # Quicklook
 cask "syntax-highlight"
