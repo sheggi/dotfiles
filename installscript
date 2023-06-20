@@ -19,7 +19,9 @@ echo '-----------------'
 if [ ! -x $(which omz)] && [ ! -d $HOME/.oh-my-zsh ]; then
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
   chsh -s `which zsh`
+fi
 
+if [ -d $HOME/.oh-my-zsh ]; then
   echo 'Install zsh themes'
   echo '------------'
   rm $HOME/.oh-my-zsh/custom/themes/remy.zsh-theme || true
@@ -82,7 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # nvm install 12
-nvm install 14
+# nvm install 14
 nvm install 16
 nvm install 18
 nvm use 18
