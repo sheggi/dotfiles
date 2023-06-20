@@ -90,7 +90,7 @@ plugins=(
     yarn
     npm
     brew
-    zsh-z
+    z
     colorize
 )
 
